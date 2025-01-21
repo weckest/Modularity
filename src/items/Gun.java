@@ -3,7 +3,7 @@ package items;
 public class Gun extends BaseItem{
 
     public Gun() {
-        super.weight = 5;
+        weight = 5;
     }
 
     @Override

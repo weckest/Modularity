@@ -13,14 +13,12 @@ public abstract class BaseItem {
 
     public void addConnection(BaseItem newConnection) {
         connections.add(newConnection);
-//        weight += newConnection.getWeight();
     }
 
     public void removeConnection(BaseItem removedConnection) {
         for(BaseItem connection : connections) {
             if(connection.equals(removedConnection)) {
                 connections.remove(connection);
-//                weight -= connection.getWeight();
                 break;
             }
         }
@@ -28,6 +26,10 @@ public abstract class BaseItem {
 
     public List<BaseItem> getConnections() {
         return connections;
+    }
+
+    public void removeALlConnections() {
+        connections = new ArrayList<BaseItem>();
     }
 
     public double getWeight() {
